@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Work Sans;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top{
+    position: fixed;
+    text-decoration: none;
+    color: black;
+    bottom: 0;
+    margin-bottom: 10px;
+    padding:10px;
+    color:white;
+    background-color:rgb(229, 91, 11);;
+    box-shadow: -1px 4px 8px 1px;
+}
+.app-container {
+    background-color: rgb(247, 245, 245);
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.small {
+    font-size: small;
+    font-weight: 100;
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+}
+
+div.app-title::first-line {
+    font-weight: 600;
+    font-size: 30px;
+    color:rgb(229, 91, 11);
+}
+
+.app-title{
+    cursor: pointer;
+    padding-top: 10px;
+}
+.selectors {
+    padding-bottom: 10px;
+    align-self: center;
+    cursor: default;
+}
+
+.selectors>button {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50px;
+    border: solid .5px;
+    background-color: wheat;
+}
+
+.post-title>a {
+    color: rgb(48, 22, 22);
+    text-decoration: none;
+}
+
+.posts-container {
+    padding-top: 10px;
+}
+
+.post-text {
+    background-color: rgb(200, 196, 196);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.post-title {
+    font-size: 18px;
+    font-weight: 450;
+}
+
+.info {
+    font-size: 12.2px;
+    padding-top: 3px;
+}
+
+.post {
+    padding: 5px 0px 5px 0px;
+}
+
+.comments:hover{
+text-decoration: underline;
+}
+
+.post:hover {
+    background-color: rgb(235, 232, 232);
+    cursor: pointer;
+}
+
+.post-by:hover{
+    text-decoration: underline;
+}
+
+.post-score{
+    display: flex;
+    flex-direction: row;
+    font-size:14.2px;
+    color:rgb(229, 91, 11);
+}
