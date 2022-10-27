@@ -12,18 +12,20 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.top{
+
+.top {
     position: fixed;
     text-decoration: none;
     color: black;
     bottom: 0;
     margin-bottom: 10px;
-    padding:10px;
-    color:white;
-    background-color:rgb(229, 91, 11);;
-    box-shadow: -1px 4px 8px 1px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(229, 91, 11);
+    ;
 }
- @media screen and (min-width: 1200px){
+
+@media screen and (min-width: 1200px) {
     body {
         font-family: Work Sans;
         display: flex;
@@ -32,7 +34,8 @@ body {
         max-width: 55%;
         margin: 0 auto;
     }
-} 
+}
+
 .app-container {
     background-color: rgb(247, 245, 245);
     padding: 0px 10px 0px 10px;
@@ -51,13 +54,14 @@ body {
 div.app-title::first-line {
     font-weight: 600;
     font-size: 30px;
-    color:rgb(229, 91, 11);
+    color: rgb(229, 91, 11);
 }
 
-.app-title{
+.app-title {
     cursor: pointer;
     padding-top: 10px;
 }
+
 .selectors {
     padding-bottom: 10px;
     align-self: center;
@@ -90,21 +94,21 @@ div.app-title::first-line {
 }
 
 .post-title {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 450;
 }
 
 .info {
-    font-size: 12.2px;
-    padding-top: 3px;
+    font-size: 14.2px;
+    padding-top: 5px;
 }
 
 .post {
     padding: 5px 0px 5px 0px;
 }
 
-.comments:hover{
-text-decoration: underline;
+.comments:hover {
+    text-decoration: underline;
 }
 
 .post:hover {
@@ -112,13 +116,44 @@ text-decoration: underline;
     cursor: pointer;
 }
 
-.post-by:hover{
+.post-by:hover {
     text-decoration: underline;
 }
 
-.post-score{
+.post-score {
     display: flex;
     flex-direction: row;
-    font-size:14.2px;
-    color:rgb(229, 91, 11);
+    font-size: 14.2px;
+    color: rgb(229, 91, 11);
+}
+
+.loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader {
+    font-size: 60px;
+    color: rgb(229, 91, 11);
+    font-weight: 600;
+    user-select: none;
+}
+
+.loadbar {
+    background-color: rgb(229, 91, 11);
+    height:5px;
+}
+
+.loading-message{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+
+}
+
+.hidden {
+    display: none;
+    transition: 4000ms;
 }
