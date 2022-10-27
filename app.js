@@ -32,12 +32,6 @@ function getPosts(posts) {
 logged = false;
 i = 1;
 function updateUI(posts) {
-  if (logged !== true) {
-    // console.log(posts);
-
-    console.log("This is a great example of speech syntheis in English");
-  }
-  logged = true;
   let date = new Date();
   date = Math.round(((Date.now() - posts.time) / 1000) % 24);
 
