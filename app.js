@@ -36,8 +36,13 @@ i = 0;
 
 function updateUI(posts, postx) {
   // loadBar.setAttribute("style", `width:${(i / postx) * 100}%`);
+
   loadBar.style.width = `${Math.floor((i / postx) * 100)}%`;
-  i++;
+  if (localStorage.getItem("i") === "500") {
+    i = 500;
+  } else {
+    i++;
+  }
   switch (loadBar.style.width) {
     case "10%":
       document.querySelector(".loading-message").innerText =
@@ -55,10 +60,9 @@ function updateUI(posts, postx) {
     case "75%":
       document.querySelector(".loading-message").innerText = "Almost there...";
       break;
-      case "99%":
-        document.querySelector(".loading-message").innerText =
-          "Welcome";
-        break;
+    case "99%":
+      document.querySelector(".loading-message").innerText = "Welcome";
+      break;
     default:
       break;
   }
@@ -105,6 +109,8 @@ getTopStoriesId();
 
 function checkDOMLoaded(i, postx) {
   if (i === postx) {
+    localStorage.setItem("i", "500");
+    console.log(localStorage.i);
     console.log("The i is", i);
     document.querySelector(".app-container").classList.remove("hidden");
     document.querySelector(".loading").classList.add("hidden");
