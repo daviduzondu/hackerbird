@@ -23,12 +23,19 @@ body {
     background-color:rgb(229, 91, 11);;
     box-shadow: -1px 4px 8px 1px;
 }
+/* @media only screen and (min-width: 600px){
+    .app-container {
+        background-color: rgb(247, 245, 245);
+        padding: 0px 10px 0px 10px;
+        display: flex;
+        justify-content: center;
+    }   
+} */
 .app-container {
     background-color: rgb(247, 245, 245);
     padding: 0px 10px 0px 10px;
     display: flex;
     justify-content: center;
-
 }
 
 .small {
@@ -73,8 +80,10 @@ div.app-title::first-line {
 }
 
 .post-text {
+    margin-top: 10px;
     background-color: rgb(200, 196, 196);
     padding: 10px;
+    font-size: 13px;
     border-radius: 10px;
 }
 
