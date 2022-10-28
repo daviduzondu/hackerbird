@@ -105,16 +105,31 @@ function updateUI(posts, postx) {
   }
   checkDOMLoaded(i, postx);
 }
-getTopStoriesId();
+if (Math.floor(Date.now() / 60000) - parseInt(localStorage.lastTime) < 5) {
+  document.querySelector(".loading").classList.add("hidden");
+  document.querySelector(".app-container").classList.remove("hidden");
+  let dom = localStorage.dom;
+  // console.log(dom);
+  document.querySelector(".app-container").children[1].children[2].innerHTML= dom;
+} else {
+  getTopStoriesId();
+}
 
 function checkDOMLoaded(i, postx) {
   if (i === postx) {
-    localStorage.setItem("i", "500");
-    console.log(localStorage.i);
-    console.log("The i is", i);
+    localStorage.setItem(
+      "lastTime",
+      JSON.stringify(Math.floor(Date.now() / 60000))
+    );
+    console.log(localStorage.setItem);
+    // console.log("The i is", i;
     document.querySelector(".app-container").classList.remove("hidden");
     document.querySelector(".loading").classList.add("hidden");
+    localStorage.setItem(
+      "dom",
+      document.querySelector(".posts-container").innerHTML
+    );
   }
 }
 
-document.querySelector(".app-container").classList.add("hidden");
+// document.querySelector(".app-container").classList.add("hidden");
