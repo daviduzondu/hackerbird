@@ -38,11 +38,10 @@ function updateUI(posts, postx) {
   // loadBar.setAttribute("style", `width:${(i / postx) * 100}%`);
 
   loadBar.style.width = `${Math.floor((i / postx) * 100)}%`;
-  if (localStorage.getItem("i") === "500") {
-    i = 500;
-  } else {
+
+
     i++;
-  }
+
   switch (loadBar.style.width) {
     case "10%":
       document.querySelector(".loading-message").innerText =
