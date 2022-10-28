@@ -105,7 +105,7 @@ function updateUI(posts, postx) {
   }
   checkDOMLoaded(i, postx);
 }
-if (Math.floor(Date.now() / 60000) - parseInt(localStorage.lastTime) < 5) {
+if (Math.floor(Date.now() / 60000) - parseInt(localStorage.lastTime) < 10) {
   document.querySelector(".loading").classList.add("hidden");
   document.querySelector(".app-container").classList.remove("hidden");
   let dom = localStorage.dom;
